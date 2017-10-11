@@ -33,6 +33,42 @@ document.write(pi + "<br>");
 document.write(name + "<br>");
 document.write(answer + "<br>");
 //-->
+
+/*  数据类型
+字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）。*/
+var z=123e-5;//  科学（指数）计数法来书写  e
+document.write(z + "<br>")
+/* 数组   数组下标是基于零的*/
+var i;
+var cars = new Array();
+cars[0] = "Saab";
+cars[1] = "Volvo";
+cars[2] = "BMW";
+
+for (i=0;i<cars.length;i++)
+{
+document.write(cars[i] + "<br>");
+}
+/*  对象  对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：*/
+// var person=
+// {
+// 	firstname : "John",
+// 	lastname  : "Doe",
+// 	id        :  5566
+// };
+// document.write(person.lastname + "<br>");
+// document.write(person["lastname"] + "<br>");
+
+/*
+   Undefined 这个值表示变量不含有值。
+可以通过将变量的值设置为 null 来清空变量。
+*/
+var person;
+var car="Volvo";
+document.write(person + "<br>");
+document.write(car + "<br>");
+var car=null
+document.write(car + "<br>");
 </script>
 
 
