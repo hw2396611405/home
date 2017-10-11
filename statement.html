@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>javaScript 语句</title> 
+</head>
+<body>
+
+<h1>我的网页</h1>
+<p id="demo">我的第一个段落。</p>
+<script>
+	//JavaScript 语句向浏览器发出的命令。语句的作用是告诉浏览器该做什么。
+	/*
+      养成良好的习惯  学会写注释
+	*/
+
+document.getElementById("demo").innerHTML = "你好 Dolly";
+<!--
+document.write("您的浏览器支持JavaScript脚本!" + "<br>");
+
+/* 变量
+与代数一样，JavaScript 变量可用于存放值（比如 x=5）和表达式（比如 z=x+y）。
+变量可以使用短名称（比如 x 和 y），也可以使用描述性更好的名称（比如 age, sum, totalvolume）。
+变量必须以字母开头
+变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）
+变量名称对大小写敏感（y 和 Y 是不同的变量）
+
+*/
+var pi=3.14;
+var name="Bill Gates";
+var answer='Yes I am!';
+document.write(pi + "<br>");
+document.write(name + "<br>");
+document.write(answer + "<br>");
+//-->
+</script>
+
+
+
+
+</body>
+</html>

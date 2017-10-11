@@ -1,0 +1,212 @@
+*{ 
+	margin:0;
+	padding:0
+}
+html,body{
+	width:100%;
+	height:100%
+}
+ul{list-style:none
+}
+#header{
+	height:51px;
+	width:100%;
+	background-color:#0065b3
+}
+#header div{
+	height:51px;
+	width:975px;
+	background-image:url("../images/base/header.png");
+	margin:auto
+}
+nav{
+	width:975px;height:105px;
+	background-image:url("../images/base/navigate.png");
+	margin:auto;
+	position:relative;
+	top:-1px
+}
+#menu{
+	width:100%;
+	height:300px;
+	background-image:url("../images/layout/theme_b_0.png");
+	position:relative;
+	background-position:center center;
+	color:#fff
+}
+#menu strong{height:33px;width:119px;
+	background-image:url("../images/layout/btn_set_banner.png");
+	position:absolute;
+	top:10px;right:10px;
+	cursor:pointer
+}
+#menu strong:hover{
+	background-position:0 -34px
+}
+#menu div.content{width:975px;
+	height:150px;
+	margin:auto;
+	position:relative;
+	top:135px
+}
+#menu div.content span{
+	height:100%;
+	background-color:rgba(255,255,255,.3);
+	border-radius:3px
+}
+#menu div.content span.info{
+	float:left;
+	width:230px;
+	margin-left:5px
+}
+#menu div.content span.list{
+	float:right;
+	width:710px;
+	margin-right:5px;
+	position:relative
+}
+#menu div.content span.list h5{
+	font-size:18px;
+	display:inline;
+	margin:15px 0 0 15px
+}					
+#menu div.content span.list em{
+	width:54px;
+	height:26px;
+	text-align:center;
+	line-height:26px;
+	font-style:normal;
+	position:absolute;
+	font-size:14px;
+	background-color:rgba(255,255,255,.3);
+	border-radius:3px;
+	cursor:pointer;
+	right:20px;
+	top:15px
+}
+#menu div.content span.list ul{
+	width:100%;
+	height:100px;
+	margin-top:10px
+}
+#menu div.content span.list ul li{
+	width:16.6%;
+	height:100%;
+	float:left;
+	cursor:pointer;
+	text-align:center
+}
+enu div.content span.list ul li i{
+	width:65px;
+	height:65px;
+	display:block;
+	background-position:0 -65px;
+	margin:auto
+}
+#menu div.content span.list ul li a{
+	color:#fff;
+	font-size:14px;
+	display:block;
+	margin-top:8px;
+	text-decoration:none
+}
+#menu div.content span.list ul li:hover a{
+	text-decoration:underline
+}
+#selector{
+	position:fixed;
+	top:0;left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(0,0,0,.5);
+	display:none
+}
+#selector div.dialog{
+	width:700px;
+	height:520px;
+	margin:auto;
+	background-color:#fff;
+	border-radius:2px;
+	position:absolute;
+	top:50%;left:50%;
+	margin-left:-350px;
+	margin-top:-260px
+}
+#selector div.dialog div.title{
+	height:40px;
+	width:100%;
+	background-color:#0066b3;
+	color:#fff;
+	line-height:40px;
+	position:relative
+}
+#selector div.dialog div.title span{
+	margin-left:20px
+}
+#selector div.dialog div.title em{
+	width:23px;
+	height:23px;
+	position:absolute;
+	top:8px;
+	cursor:pointer;
+	right:10px;
+	background-image:url("../images/icon_24_close.png")
+}
+#selector div.dialog div.title em:hover{background-position:0 -24px}
+#selector div.dialog div.content{width:660px;height:460px;margin:auto}
+#selector div.dialog div.content div.text{text-align:right;margin:20px 10px 5px 0;
+	font-size:14px;color:#999
+}
+#selector div.dialog div.content div.text span{color:#e2928a}
+#selector div.dialog div.content div.selected{height:40px;line-height:40px;color:#000;
+	background-color:#ddd
+}
+#selector div.dialog div.content div.selected span{float:left;margin-right:20px}
+#selector div.dialog div.content div.selected ul{float:left}
+#selector div.dialog div.content div.selected ul li{
+	float:left;
+	font-size:14px;
+	margin-right:5px
+}
+#selector div.dialog div.content ul.items{
+	display:block;
+	margin-top:3px;
+	height:330px;
+	background-color:#ddd
+}
+#selector div.dialog div.content ul.items li{
+	width:16.6%;
+	height:100px;
+	text-align:center;
+	padding-top:10px;
+	cursor:pointer;
+	font-size:14px;
+	float:left
+}
+#selector div.dialog div.content ul.items li i{
+	width:65px;
+	height:65px;
+	display:block;
+	background-image:url("../images/layout/icon_65_wyzz.png");
+	margin:0 auto 10px auto
+}
+#selector div.dialog div.content ul.items li.selected i,
+#selector div.dialog div.content ul.items li:hover i{
+	background-position:0 -65px
+}
+#selector div.dialog div.content button.save{
+	display:block;
+	margin:auto;
+	margin-top:15px;
+	background-color:#2a83c7;
+	width:200px;
+	height:30px;
+	border:0;
+	line-height:30px;
+	border-radius:3px;
+	color:#fff;
+	font-size:14px
+}
+#selector div.dialog div.content button.save:hover{
+	background-color:#0066b3
+}
