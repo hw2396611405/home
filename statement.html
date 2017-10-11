@@ -49,7 +49,9 @@ for (i=0;i<cars.length;i++)
 {
 document.write(cars[i] + "<br>");
 }
-/*  对象  对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：*/
+/*  对象  对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：
+    对象是拥有属性和方法的数据
+*/
 // var person=
 // {
 // 	firstname : "John",
@@ -59,16 +61,23 @@ document.write(cars[i] + "<br>");
 // document.write(person.lastname + "<br>");
 // document.write(person["lastname"] + "<br>");
 
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+document.getElementById("demo").innerHTML =
+	person.firstName + " 现在 " + person.age + " 岁.";
+
 /*
    Undefined 这个值表示变量不含有值。
 可以通过将变量的值设置为 null 来清空变量。
 */
-var person;
-var car="Volvo";
-document.write(person + "<br>");
-document.write(car + "<br>");
-var car=null
-document.write(car + "<br>");
+// var person;
+// var car="Volvo";
+// document.write(person + "<br>");
+// document.write(car + "<br>");
+// var car=null
+// document.write(car + "<br>");
+
+
+
 </script>
 
 
