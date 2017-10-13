@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<!-- <h1>JavaScript 验证输入</h1>
+
+<p>请输入 1 到 10 之间的数字：</p>
+
+<input type="text"  id="email" required="required">
+
+<button type="button" onclick="validateForm()">提交</button>
+
+<p id="demo"></p> -->
+<p> 请输入数字并点击验证按钮：</p>
+<input type="number" id="id1" min="100" max="300" required="required">
+<button onclick="myFunction()">验证</button>
+<p>如果输入的数字小于 100 或大于300，会提示错误信息。</p>
+
+<p id="demo"></p>
+<script>
+// function myFunction() {
+//     var x, text;
+
+//     // 获取 id="numb" 的值
+//     x = document.getElementById("numb").value;
+// // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
+//     if (x == null || x == "") {
+//        text = "请输入内容" 
+//     }else if (isNaN(x) || x < 1 || x > 10) {
+//         text = "输入错误";
+//     } else {
+//         text = "输入正确";
+//     }
+//     document.getElementById("demo").innerHTML = text;
+// }
+
+/* 邮箱验证*/
+function validateForm(){
+    var x=document.getElementById("email").value;
+    var atpos=x.indexOf("@");
+    var dotpos=x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+        alert("不是一个有效的 e-mail 地址");
+        return false;
+    }else {
+  document.getElementById("demo").innerHTML = "这是一个有效的 e-mail 地址";
+    }
+}
+/*  */
+function myFunction() {
+     var inpObj = document.getElementById("id1");
+     if (inpObj.checkValidity() == false) {
+       document.getElementById("demo").innerHTML = inpObj.validationMessage;
+
+     }else {
+       document.getElementById("demo").innerHTML = "输入正确";
+
+     }
+   // var inpObj = document.getElementById("id1");
+    // if (inpObj.checkValidity() == false) {
+    //     document.getElementById("demo").innerHTML = inpObj.validationMessage;
+    // } else {
+    //     document.getElementById("demo").innerHTML = "输入正确";
+    // }
+
+}
+</script>
+
+</body>
+</html>
