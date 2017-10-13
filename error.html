@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>  错误</title>
+</head>
+<body>
+
+<p>请输出一个 5 到 10 之间的数字:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">测试输入</button>
+<p id="message"></p>
+
+<script>
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+
+var x = 15 * 5;
+debugger;
+document.getElementById("demo").innerHTML = x;
+
+function myFunction() {
+    /*  try 语句测试代码块的错误
+        catch 语句处理错误
+        throw 语句创建自定义错误
+        当错误发生时，当事情出现问题时，JavaScript引擎通常会停止，并生成一个错误信息
+        描述这种情况的技术术语是：JavaScript将抛出（throw）一个错误
+    */
+    var message, x;
+    message = document.getElementById("message");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try { 
+        if(x == "")  throw "值为空";
+        if(isNaN(x)) throw "不是数字";
+        x = Number(x);
+        if(x < 5)    throw "太小";
+        if(x > 10)   throw "太大";
+    }
+    catch(err) {
+        message.innerHTML = "错误: " + err;
+    }
+}
+</script>
+
+</body>
+</html>
