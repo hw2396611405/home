@@ -11,7 +11,13 @@
      当在文本中搜索数据时，可以用搜索模式来描述要查询的内容
      正则表达式可以用一个简单的字符 或一个更负责的模式
      正则表达式可用于所有文本搜索和文本替换的操作
+
+     正则表达式修饰符
+     i  执行对大小写不敏感的匹配
+     g  执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）
+     m  执行多行匹配
  -->
+
 </p>
 
 <p>搜索字符串 "runoob", 并显示匹配的起始位置：</p>
@@ -30,7 +36,7 @@ function myFunction() {
 }
 function myFunction1() {
     var str = document.getElementById("demo1").innerHTML; 
-    var txt = str.replace(/microsoft/i,"Runoob");
+    var txt = str.replace(/microsoft/i,"Runoob");//replace() 方法使用正则表达式
     document.getElementById("demo1").innerHTML = txt;
 }
 </script>
