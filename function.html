@@ -79,6 +79,63 @@ function myFunction()
 		"我可以显示 " + carName;
 }
 
+  /*  函数调用
+      JavaScript 函数有4种调用方式
+      每种方式的不同方式在于this的初始化  注意：this是保留关键字，不能修改this的值
+     一般而言，在JavaScript中，this指向函数执行时的当前对象
+     1.函数中的代码在函数被调用后执行
+     function myFunction(a, b) {
+       return a * b;
+     }
+     myFunction(10, 2); 
+     2.在 HTML 中默认的全局对象是 HTML 页面本身，所以函数是属于 HTML 页面。
+在浏览器中的页面对象是浏览器窗口(window 对象)。以上函数会自动变为 window 对象的函数。
+myFunction() 和 window.myFunction() 是一样的
+    
+      全局对象
+      当函数没有被自身的对象调用时， this 的值就会变成全局对象。
+      在 web 浏览器中全局对象是浏览器窗口（window 对象）
+  */
+  
+  /*函数作为方法调用
+    创建了一个对象（myObject),对象有两个属性（firstName 和lastName）,及一个方法（fullName）
+   fullName 方法是一个函数。函数属于对象。 myObject 是函数的所有者。
+this对象，拥有 JavaScript 代码。实例中 this 的值为 myObject 对象。
+
+  */
+  var myObject = {
+    firstName:"John",
+    lastName: "Doe",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+document.getElementById("demo").innerHTML = myObject.fullName();
+
+/* 作为函数方法调用函数
+   在JavaScript中，函数是对象。JavaScript函数有它的属性和方法
+   call()和apply() 是预定义的函数方法。两个方法可用于调用函数，两个方法的第一个参数必须是对象本身
+    两者的区别在于第二个参数：apply传入的是一个参数数组，也就是将多个参数组合成一个数组传入，而
+    call 则作为call的参数传入（从第二个参数开始）
+    在 JavaScript 严格模式(strict mode)下, 在调用函数时第一个参数会成为 this 的值， 即使该参数不是一个对象。
+    在 JavaScript 非严格模式(non-strict mode)下, 如果第一个参数的值是 null 或 undefined, 它将使用全局对象替代。
+*/
+
+
+/* 闭包
+  闭包就是一个函数引用另一个函数的变量，因为变量被引用着所以不会被回收
+
+*/
+
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+}
+
+
 </script>
 </body>
 </html>

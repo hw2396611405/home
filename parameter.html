@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>函数参数</title>
+</head>
+<body>
+<p>查找最大的数</p>
+<p id = "demo"></p>
+
+<script type="text/javascript">
+	/*
+     JavaScript 函数有个内置的对象 arguments 对象。
+      argument 对象包含了函数调用的参数数组。
+      通过值传递参数
+        在函数中调用的参数是函数的隐式参数。
+        JavaScript 隐式参数通过值来传递：函数仅仅只是获取值。
+        如果函数修改参数的值，不会修改显式参数的初始值（在函数外定义）。
+        隐式参数的改变在函数外是不可见的。
+	*/
+	x = findMax(1,123,500,600,100,66);
+	function findMax() {
+		var i, max = arguments[0];
+		if (arguments.length < 2) return max;
+	for ( i = 0; i < arguments.length; i++) {
+		if (arguments[i] > max) { 
+			max = arguments[i];
+		}
+	    
+	}
+   return max;
+}
+document.getElementById('demo').innerHTML = x;
+</script>
+
+
+</body>
+</html>
