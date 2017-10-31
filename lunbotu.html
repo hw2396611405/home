@@ -5,9 +5,11 @@
 	<meta charset="utf-8">
 	<title>轮播图</title>
 	<style type="text/css">
-		* {box-sizing:border-box}
+ * {box-sizing:border-box}
 body {font-family: Verdana,sans-serif;}
-.mySlides {display:none}
+.mySlides {
+	display:none
+}
 /* 幻灯片容器 */
 .slideshow-container {
   max-width: 1000px;
@@ -94,10 +96,7 @@ body {font-family: Verdana,sans-serif;}
   from {opacity: .4} 
   to {opacity: 1}
 }
-
-
-
-	</style>
+</style>
 
 </head>
 <body>
@@ -143,8 +142,6 @@ function showSlides() {
     slides[slideIndex-1].style.display = "block"; 
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-
-	
 </script>
 
 </body>
